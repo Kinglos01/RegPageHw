@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
 import java.util.regex.Pattern;
 
 public class HelloController {
@@ -27,12 +28,13 @@ public class HelloController {
     String emailPattern = "^[a-zA-Z0-9._%$!-]+@farmingdale\\.edu$";
     Pattern email =  Pattern.compile(emailPattern);
 
-    String dobPattern = "^[0-9]{2}+\\/[1-9]{2}\\/[0-9]{4}$";
+    String dobPattern = "^[0-9]{2}+/[0-9]{2}/[0-9]{4}$";
     Pattern dob =  Pattern.compile(dobPattern);
 
     String zipPattern = "^[0-9]{5}$";
     Pattern zip =  Pattern.compile(zipPattern);
 
+    HelloApplication loader = new HelloApplication();
 
     public void eligibleChecker(){
         if (isFirstValid() && isLastValid() && isEmailValid() && isDobValid() && isZipValid()) {
@@ -42,16 +44,9 @@ public class HelloController {
     }
 
     @FXML
-    private void addUserButtonClicked(){
-        if(name.matcher(firstText.getText()).matches() && name.matcher(lastText.getText()).matches()){
-            if(email.matcher(emailText.getText()).matches()){
-                if(dob.matcher(dobText.getText()).matches()){
-                    if(zip.matcher(zipText.getText()).matches()){
-                        System.out.println("User added!");
-                    } else{System.out.println("Invalid zip code!");}
-                } else{System.out.println("Invalid Date of Birth!");}
-            }else{System.out.println("Invalid email!");}
-        }else{System.out.println("Invalid first or last name!");}
+    public void addUserButtonClicked() throws IOException {
+       System.out.println("User added!");
+       loader.setRoot("nextPage");
     }
 
     public boolean isFirstValid(){
