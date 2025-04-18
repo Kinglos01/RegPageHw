@@ -22,6 +22,14 @@ public class HelloController {
     @FXML
     private Button addUser;
 
+    /**
+     * Represents a regular expression pattern used to validate user names.
+     * The pattern enforces the following rules:
+     * - The name must start with any character (e.g., a letter, digit, or symbol).
+     * - It must include only alphabetic characters (uppercase or lowercase).
+     * - The length of the name must be between 2 and 25 characters (inclusive).
+     */
+
     String namePattern = "^.[a-zA-Z]{2,25}$";
     Pattern name =  Pattern.compile(namePattern);
 
@@ -35,6 +43,10 @@ public class HelloController {
     Pattern zip =  Pattern.compile(zipPattern);
 
     HelloApplication loader = new HelloApplication();
+
+    /***
+     * Checks if the user's input is valid and enables the "Add User" button if so.
+     */
 
     public void eligibleChecker(){
         if (isFirstValid() && isLastValid() && isEmailValid() && isDobValid() && isZipValid()) {

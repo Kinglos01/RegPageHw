@@ -1,0 +1,31 @@
+.root{
+    -fx-background-color:
+            linear-gradient(from 0% 0% to 100% 100%,
+            #92a1d8,
+            #bbecb5 30%,
+            #76abe3 60%,
+            #a5eca6);
+
+    -fx-background-radius: 14;
+    -fx-effect: dropshadow(gaussian, rgba(211, 209, 209, 0.3), 10, 0.2, 0, 1);
+    -fx-border-color: rgba(197, 195, 195, 0.5);
+    -fx-border-radius: 14;
+    -fx-border-width: 1;
+}
+
+.label{
+    -fx-text-fill: Black;
+    -fx-font-family: "American Typewriter";
+   -fx-font-weight:  Bold;
+}
+
+.button{
+    -fx-background-color: #000000;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-padding: 8 16;
+}
+
+.button:hover {
+    -fx-background-color: #ffb306;
+}

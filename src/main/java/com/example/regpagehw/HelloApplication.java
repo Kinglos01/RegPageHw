@@ -11,6 +11,13 @@ import java.io.IOException;
 
 public class HelloApplication extends Application {
 
+    /**
+     * Represents the primary {@code Scene} object for the JavaFX application.
+     * This variable holds the current scene displayed in the application's main stage.
+     * The scene is initialized in the {@code start} method of the {@code HelloApplication} class
+     * and can be dynamically updated or reconfigured as needed during runtime.
+     */
+
     private static Scene scene;
 
     @Override
