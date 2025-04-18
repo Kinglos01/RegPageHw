@@ -46,7 +46,7 @@
             </font>
          </Label>
          <TextField fx:id="zipText" layoutX="25.0" layoutY="360.0" onKeyTyped="#zipTyped" prefHeight="25.0" prefWidth="240.0" />
-         <Label layoutX="109.0" layoutY="38.0" text="Welcome to the registration page!">
+         <Label layoutX="24.0" layoutY="38.0" text="Welcome to the registration page!">
             <font>
                <Font size="25.0" />
             </font>

@@ -19,6 +19,7 @@ public class HelloApplication extends Application {
         scene = new Scene(fxmlLoader.load(), 620, 480);
         primaryStage.setScene(scene);
         primaryStage.show();
+        scene.getStylesheets().add(HelloApplication.class.getResource("drip.css").toExternalForm());
     }
 
 
