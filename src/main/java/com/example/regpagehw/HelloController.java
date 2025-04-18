@@ -45,7 +45,8 @@ public class HelloController {
     HelloApplication loader = new HelloApplication();
 
     /***
-     * Checks if the user's input is valid and enables the "Add User" button if so.
+     *@method eligibleChecker then checks to see if the new inputs are valid
+     * Then it returns @param addUser.setDisable(false) if they are valid
      */
 
     public void eligibleChecker(){
